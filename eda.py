@@ -4,10 +4,12 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import seaborn as sns
 import skimage
 from PIL import Image
 
-from consts import DATA_DIR, TRAIN_DIR, RNG
+from consts import DATA_DIR, RNG, TRAIN_DIR
 
 
 def check_img_dims():
@@ -107,6 +109,16 @@ def create_color_histogram_examples(
         plt.close(fig)
 
 
+def visualize_pairplot(data, **kwargs):
+    sns.pairplot(data, hue="tumor", **kwargs)
+    plt.show()
+
+
+def visualize_heatmap(data, **kwargs):
+    sns.heatmap(data.corr(), annot=True, **kwargs)
+    plt.show()
+
+
 def main():
     test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign", "1000.jpg")))
     # # see if any images are not 224 x 224 pixels
@@ -116,9 +128,16 @@ def main():
     # plot_example_images()
 
     # make some color histogram examples
-    create_color_histogram_examples(
-        20, ignore_black_pixels=True, black_pixel_threshold=10
-    )
+    # create_color_histogram_examples(
+    #     20, ignore_black_pixels=True, black_pixel_threshold=10
+    # )
+
+    # visualize features
+    df_from_json = pd.read_json("features.json", orient="index")
+    # visualize_pairplot(
+    #     df_from_json, **{"vars": ["mean_red", "mean_green", "mean_blue", "mean_gray"]}
+    # )
+    visualize_heatmap(df_from_json, **{"cmap": "vlag"})
 
 
 if __name__ == "__main__":
