@@ -24,20 +24,20 @@ scaler = preprocessing.RobustScaler().fit(X_train)
 X_train_sc = scaler.transform(X_train)
 X_test_sc = scaler.transform(X_test)
 
-# clf = model_selection.RandomizedSearchCV(
-#     svm.SVC(kernel="rbf", random_state=SEED),
-#     {
-#         "C": scipy.stats.loguniform(1, 1e5),
-#         "gamma": scipy.stats.loguniform(1e-3, 1e-1),
-#     },
-#     n_iter=10,
-#     scoring="accuracy",
-#     refit=True,
-#     n_jobs=-1,
-#     verbose=3,
-#     random_state=SEED,
-# )
-clf = svm.SVC(kernel="rbf", random_state=SEED).fit(X_train_sc, y_train)
+clf = model_selection.RandomizedSearchCV(
+    svm.SVC(kernel="rbf", random_state=SEED),
+    {
+        "C": scipy.stats.loguniform(1, 1e5),
+        "gamma": scipy.stats.loguniform(1e-3, 1e-1),
+    },
+    n_iter=10,
+    scoring="accuracy",
+    refit=True,
+    n_jobs=-1,
+    verbose=3,
+    random_state=SEED,
+)
+clf = clf.fit(X_train_sc, y_train)
 
 y_pred = clf.predict(X_test_sc)
 print(f"Accuracy: {metrics.accuracy_score(y_test, y_pred)}")
