@@ -55,7 +55,9 @@ def plot_example_images():
     fig.savefig("figs/training_set_example.png", dpi=200)
 
 
-def create_color_histogram_examples(n_examples, show=False):
+def create_color_histogram_examples(
+    n_examples, ignore_black_pixels=False, black_pixel_threshold=20, show=False
+):
     """
     Create a handful for color histograms for viewing.
     """
@@ -67,43 +69,42 @@ def create_color_histogram_examples(n_examples, show=False):
             fname = RNG.choice(os.listdir(dirpath))
             img = np.asarray(Image.open(os.path.join(dirpath, fname)))
 
+            # convert grayscale image from [0.0, 1.0] to [0, 255]
+            img_gray = skimage.color.rgb2gray(img) * 255
+            if ignore_black_pixels:
+                img_gray = img_gray[img_gray >= black_pixel_threshold]
+
             axes[i, 0].imshow(img)
             axes[i, 0].axis("off")
             axes[i, 0].set_title(f"{os.path.join(dirpath, fname)}", fontsize=12)
 
             for c, color in enumerate(["red", "green", "blue"]):
-                img_hist, bins = skimage.exposure.histogram(img[..., c])
+                channel = img[..., c]
+                if ignore_black_pixels:
+                    channel = channel[channel >= black_pixel_threshold]
+
+                img_hist, bins = skimage.exposure.histogram(channel)
                 axes[i, c + 1].plot(bins, img_hist / img_hist.max(), color=color)
-                img_cdf, bins = skimage.exposure.cumulative_distribution(img[..., c])
+                img_cdf, bins = skimage.exposure.cumulative_distribution(channel)
                 axes[i, c + 1].plot(bins, img_cdf, color=color, linestyle="dashed")
 
-            img_gray = skimage.color.rgb2gray(img)
             img_gray_hist, bins = skimage.exposure.histogram(img_gray)
-            axes[i, -1].plot(
-                bins * 256, img_gray_hist / img_gray_hist.max(), color="gray"
-            )
+            axes[i, -1].plot(bins, img_gray_hist / img_gray_hist.max(), color="gray")
             img_gray_cdf, bins = skimage.exposure.cumulative_distribution(img_gray)
-            axes[i, -1].plot(bins * 256, img_gray_cdf, color="gray", linestyle="dashed")
+            axes[i, -1].plot(bins, img_gray_cdf, color="gray", linestyle="dashed")
 
         fig.tight_layout()
-        fig.savefig(f"figs/color-hists/example_{n}.jpg", dpi=200)
+
+        fig_save_path = "figs/color-hists"
+        if not os.path.exists(fig_save_path):
+            os.makedirs(fig_save_path)
+
+        fig.savefig(os.path.join(fig_save_path, f"example_{n}.jpg"), dpi=200)
 
         if show:
             plt.show()
 
         plt.close(fig)
-
-
-def compute_moments(x, Px):
-    mean = np.sum(x * Px)
-    vari = np.sum(((x - mean) ** 2) * Px)
-
-    z = (x - mean) / np.sqrt(vari)
-
-    skew = np.sum((z**3) * Px)
-    kurt = np.sum((z**4) * Px)
-
-    return (mean, vari, skew, kurt)
 
 
 def main():
@@ -115,12 +116,9 @@ def main():
     # plot_example_images()
 
     # make some color histogram examples
-    # create_color_histogram_examples(20)
-
-    # red channel moments
-    for i in range(3):
-        img_hist, bins = skimage.exposure.histogram(test_img[..., i])
-        print(compute_moments(bins, img_hist / img_hist.max()))
+    create_color_histogram_examples(
+        20, ignore_black_pixels=True, black_pixel_threshold=10
+    )
 
 
 if __name__ == "__main__":
