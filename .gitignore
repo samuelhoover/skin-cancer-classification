@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Additional files
-data/archive (5).zip
+data*/

@@ -7,13 +7,10 @@ requires-python = ">=3.11"
 dependencies = [
     "matplotlib>=3.10.0",
     "pandas>=2.2.3",
-    "polars>=1.23.0",
     "scikit-image>=0.25.2",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
 ]
 
 [dependency-groups]
-dev = [
-    "ipykernel>=6.29.5",
-]
+dev = []
