@@ -5,7 +5,6 @@ import shutil
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 import seaborn as sns
 import skimage
 from PIL import Image
@@ -163,7 +162,7 @@ def visualize_heatmap(data, **kwargs):
 
 
 def main():
-    test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign_1000.jpg")))
+    # test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign_1000.jpg")))
     # # see if any images are not 224 x 224 pixels
     # check_img_dims()
     #

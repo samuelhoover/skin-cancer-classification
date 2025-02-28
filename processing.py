@@ -10,7 +10,7 @@ from PIL import Image
 from skimage.color import rgb2gray
 from sklearn import decomposition
 
-from consts import TRAIN_DIR, SEED
+from consts import SEED
 
 ###########
 ### KEY ###
