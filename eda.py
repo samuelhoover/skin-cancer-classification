@@ -1,6 +1,7 @@
 # pyright: basic
 
 import os
+import shutil
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -109,6 +110,48 @@ def create_color_histogram_examples(
         plt.close(fig)
 
 
+def compile_thresholded_imgs(black_pixel_threshold):
+    num_pixels = 224 * 224
+    save_path = "data/thresholded_imgs"
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    for f in (x for x in os.listdir(TRAIN_DIR) if x.endswith(".jpg")):
+        img_src = os.path.join(TRAIN_DIR, f)
+        img = np.asarray(Image.open(img_src))
+        for c, color in enumerate(["red", "green", "blue"]):
+            channel = img[..., c]
+            channel = channel[channel >= black_pixel_threshold]
+            if np.prod(channel.shape) < num_pixels:
+                shutil.copy2(
+                    img_src,
+                    os.path.join(save_path, f),
+                )
+                break
+            elif np.prod(channel.shape) == num_pixels:
+                pass
+            else:
+                print(
+                    f"Error: {f}, {color} channel has more pixels than original channel!"
+                )
+
+
+def equalize_imgs():
+    save_path = "data/equalized_imgs"
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    for f in (x for x in os.listdir(TRAIN_DIR) if x.endswith(".jpg")):
+        img_src = os.path.join(TRAIN_DIR, f)
+        img = np.asarray(Image.open(img_src))
+        img_adapteq = Image.fromarray(
+            (skimage.exposure.equalize_adapthist(img, clip_limit=0.01) * 255).astype(
+                np.uint8
+            )
+        )
+        img_adapteq.save(os.path.join(save_path, f))
+
+
 def visualize_pairplot(data, **kwargs):
     sns.pairplot(data, hue="tumor", **kwargs)
     plt.show()
@@ -120,7 +163,7 @@ def visualize_heatmap(data, **kwargs):
 
 
 def main():
-    test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign", "1000.jpg")))
+    test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign_1000.jpg")))
     # # see if any images are not 224 x 224 pixels
     # check_img_dims()
     #
@@ -132,12 +175,16 @@ def main():
     #     20, ignore_black_pixels=True, black_pixel_threshold=10
     # )
 
-    # visualize features
-    df_from_json = pd.read_json("features.json", orient="index")
-    # visualize_pairplot(
-    #     df_from_json, **{"vars": ["mean_red", "mean_green", "mean_blue", "mean_gray"]}
-    # )
-    visualize_heatmap(df_from_json, **{"cmap": "vlag"})
+    # # visualize features
+    # df_from_json = pd.read_json("features.json", orient="index")
+    # # visualize_pairplot(
+    # #     df_from_json, **{"vars": ["mean_red", "mean_green", "mean_blue", "mean_gray"]}
+    # # )
+    # visualize_heatmap(df_from_json, **{"cmap": "vlag"})
+    #
+    compile_thresholded_imgs(1)
+
+    # equalize_imgs()
 
 
 if __name__ == "__main__":
