@@ -1,15 +1,16 @@
 # pyright: basic
-import json
 import os
-from collections import defaultdict
 
 import numpy as np
-import numpy.typing as npt
+
+# import numpy.typing as npt
+import pandas as pd
 import skimage
 from PIL import Image
 from skimage.color import rgb2gray
+from sklearn import decomposition
 
-from consts import TRAIN_DIR
+from consts import TRAIN_DIR, SEED
 
 ###########
 ### KEY ###
@@ -34,20 +35,25 @@ def calculate_moments(x, Px):
     return (mean, vari, skew, kurt)
 
 
-def group_rbg_gray_img(img_path):
+def group_rbg_gray_img(img):
     """
     Concatenate original image with grayscaled image. Multiply grayscale image
     by 255 since `rgb2gray` outputs intensities (0.0 to 1.0) and I want to
     match RGB scale (0 to 255).
     """
-    img = np.asarray(Image.open(img_path))
     img_gray = rgb2gray(img)[:, :, np.newaxis] * 255
     grouped_img = np.concat([img, img_gray], axis=-1)
 
     return grouped_img
 
 
-def calculate_image_moments(grouped_img, feature_dict, **kwargs):
+def calculate_color_moments(grouped_img, **kwargs):
+    """
+    Calculate the first four moments -- mean (mean), variance (vari), skewness
+    (skew), and kurtosis (kurt) -- from the histogram of color values for each
+    channel (red, green, blue, and gray).
+    """
+    color_moment_dict = {}
     for c, color in enumerate(["red", "green", "blue", "gray"]):
         channel = grouped_img[..., c]
         img_hist, bins = skimage.exposure.histogram(
@@ -57,44 +63,136 @@ def calculate_image_moments(grouped_img, feature_dict, **kwargs):
         norm_img_hist = img_hist / img_hist.max()
         m, v, s, k = calculate_moments(bins, norm_img_hist)
 
-        feature_dict[f"{kwargs['img_path']}"][f"mean_{color}"] = m
-        feature_dict[f"{kwargs['img_path']}"][f"vari_{color}"] = v
-        feature_dict[f"{kwargs['img_path']}"][f"skew_{color}"] = s
-        feature_dict[f"{kwargs['img_path']}"][f"kurt_{color}"] = k
+        color_moment_dict[f"mean_{color}"] = m
+        color_moment_dict[f"vari_{color}"] = v
+        color_moment_dict[f"skew_{color}"] = s
+        color_moment_dict[f"kurt_{color}"] = k
 
-    return feature_dict
+    return color_moment_dict
 
 
-def create_features(black_pixel_threshold):
-    features = defaultdict(dict)
+def extract_hog_features(img, orientations, pixels_per_cell, cells_per_block):
+    return skimage.feature.hog(
+        img,
+        orientations=orientations,
+        pixels_per_cell=pixels_per_cell,
+        cells_per_block=cells_per_block,
+        channel_axis=-1,
+        feature_vector=True,
+    )
 
-    for path, dirnames, filenames in os.walk(TRAIN_DIR):
-        # limit search only to image-containing directories (`dirnames` should be empty list)
-        if not dirnames:
-            for f in filenames:
-                img_path = os.path.join(path, f)
 
-                # extract targets (0 for benign, 1 for malignant)
-                features[f"{img_path}"]["tumor"] = 0 if path.endswith("Benign") else 1
+def extract_lbp_features(img, num_points, radius):
+    lbp = skimage.feature.local_binary_pattern(
+        np.asarray(rgb2gray(img) * 255).astype(np.uint8), num_points, radius, "uniform"
+    )
+    counts, _ = np.histogram(
+        lbp.ravel(),
+        density=True,
+        bins=int(lbp.max() + 1),
+        range=(0, int(lbp.max() + 1)),
+    )
 
-                # create grouped image from original image and grayscaled image
-                grouped_img = group_rbg_gray_img(img_path)
+    return counts
 
-                features = calculate_image_moments(
-                    grouped_img,
-                    features,
-                    **{
-                        "img_path": img_path,
-                        "black_pixel_threshold": black_pixel_threshold,
-                    },
+
+def create_full_feature_set(data_src, black_pixel_threshold, save_path):
+    features_list = []
+
+    for f in (x for x in os.listdir(data_src) if x.endswith(".jpg")):
+        img_path = os.path.join(data_src, f)
+        img = np.asarray(Image.open(img_path))
+
+        img_dict = {"img_src": img_path}
+
+        # extract targets (0 for benign, 1 for malignant)
+        img_dict = img_dict | {"tumor": 0 if f.startswith("Benign") else 1}
+
+        img_dict = img_dict | calculate_color_moments(
+            group_rbg_gray_img(img),
+            **{
+                "img_path": img_path,
+                "black_pixel_threshold": black_pixel_threshold,
+            },
+        )
+
+        orientations = 8
+        pixels_per_cell = (16, 16)
+        cells_per_block = (2, 2)
+        img_dict = img_dict | {
+            f"hog_pca_{i}": v
+            for i, v in enumerate(
+                extract_hog_features(
+                    img, orientations, pixels_per_cell, cells_per_block
                 )
+            )
+        }
 
-    with open("features.json", mode="w") as outfile:
-        json.dump(features, outfile, indent=4)
+        radius = 8
+        n_points = 3 * radius
+        img_dict = img_dict | {
+            f"lbp_{i}": v
+            for i, v in enumerate(extract_lbp_features(img, n_points, radius))
+        }
+
+        features_list.append(img_dict)
+
+    df = pd.DataFrame(features_list)
+    df = df.set_index("img_src")
+    df.to_csv(save_path)
+
+
+def calculate_pc_from_hog(X_hog, n_pc, svd_solver="auto"):
+    pca = decomposition.PCA(n_components=n_pc, svd_solver=svd_solver, random_state=SEED)
+    pca.fit(X_hog)
+
+    return pca.transform(X_hog), pca
+
+
+def create_dataset(features_path, n_pc, svd_solver="auto"):
+    df = pd.read_csv(features_path, index_col="img_src")
+    y = df.pop("tumor")
+    X = df
+
+    hog_cols = [col for col in X.columns if col.startswith("hog")]
+    hog_pca, _ = calculate_pc_from_hog(
+        X.loc[:, hog_cols],
+        n_pc=n_pc,
+        svd_solver=svd_solver,
+    )
+
+    X.drop(hog_cols, axis=1, inplace=True)
+    X_reduced = pd.concat(
+        [
+            X,
+            pd.DataFrame(
+                hog_pca,
+                index=X.index,
+                columns=[f"hog_pca_{i}" for i in range(n_pc)],
+            ),
+        ],
+        axis=1,
+        join="inner",
+    )
+
+    return X_reduced, y
 
 
 def main():
-    create_features(black_pixel_threshold=10)
+    # data_src = os.path.join(TRAIN_DIR)
+    # threshold = 5
+    # create_full_feature_set(
+    #     data_src=data_src,
+    #     black_pixel_threshold=threshold,
+    #     save_path=f"data/features_threshold_{threshold}.csv",
+    # )
+    # load_features_into_dataframe("features.json")
+    # calculate_pc_from_hog(
+    #     pd.read_csv("data/features_threshold_5.csv"),
+    #     n_pc=100,
+    #     svd_solver="auto",
+    # )
+    create_dataset("data/features_threshold_5.csv", n_pc=5)
 
 
 if __name__ == "__main__":
