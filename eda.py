@@ -9,7 +9,7 @@ import seaborn as sns
 import skimage
 from PIL import Image
 
-from consts import DATA_DIR, RNG, TRAIN_DIR
+from utils.consts import DATA_DIR, RNG, TRAIN_DIR
 
 
 def check_img_dims():
