@@ -14,3 +14,8 @@ data*/
 *.pdf
 features/
 figs/equalized_imgs
+utils/
+!utils/__init__.py
+!utils/consts.py
+!utils/plotting.py
+!utils/processing.py
