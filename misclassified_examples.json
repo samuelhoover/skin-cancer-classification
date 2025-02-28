@@ -1,0 +1,1477 @@
+[
+    {
+        "img_path": "data/train/Benign_2738.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1623.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1285.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2798.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_69.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_997.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_933.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1271.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1559.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1107.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3367.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4465.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5204.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_755.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4310.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_593.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1055.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4323.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_903.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_928.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2125.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_4488.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3259.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_201.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2634.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4397.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5544.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1402.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_825.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3280.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_333.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2220.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_195.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3316.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5594.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_6283.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1023.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_86.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1994.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1240.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1743.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_3889.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_428.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4981.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1191.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5145.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4641.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_253.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3689.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_3612.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5506.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3578.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_258.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1502.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5471.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2013.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5378.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5512.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3285.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_793.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_953.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2340.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_288.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1254.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_688.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4056.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_196.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5424.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5846.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_298.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5385.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1596.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_868.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_300.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5352.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1513.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2235.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2500.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3811.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_228.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_924.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3092.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1036.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5579.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_731.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5583.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5735.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4144.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_666.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_586.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2230.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5397.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_571.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5581.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3391.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4448.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_350.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_544.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4765.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1556.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3826.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_680.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3480.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2761.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_577.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_251.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4900.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4861.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_81.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1501.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2451.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5769.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5375.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3033.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2527.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3662.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2533.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1202.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3784.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_3503.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5518.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_586.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5402.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4209.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5328.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5106.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_860.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_418.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1681.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1079.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1997.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_831.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5132.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2131.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_234.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5266.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2601.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_402.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3514.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1505.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2296.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5415.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_6249.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1524.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1106.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4959.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_933.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2252.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_221.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5405.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_800.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_6105.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1689.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1870.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_3021.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_569.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5509.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_674.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5797.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1265.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5948.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5453.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5416.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_3310.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2455.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_498.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_870.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4988.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_303.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2630.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_3145.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2642.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2285.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5539.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4517.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_4589.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1980.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1247.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_264.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_736.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5086.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2425.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4283.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_521.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1230.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_345.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1682.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2070.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2958.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2761.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_115.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1274.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2302.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_907.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5329.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1007.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5370.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_1027.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_96.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1835.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_3897.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2558.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5474.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2752.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2680.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_686.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_4494.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4578.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5472.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5571.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5242.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3872.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1138.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3958.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2922.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_119.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_3639.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5450.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1450.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_4427.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5553.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5426.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5564.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1197.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4816.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5315.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2045.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5863.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4004.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4849.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_269.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4112.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5355.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2601.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1289.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_313.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4393.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_415.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2074.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_5991.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4334.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_3157.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1519.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4368.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2940.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1897.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2342.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5119.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_2880.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5330.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5322.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2724.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5482.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5523.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1498.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2395.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2404.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_3108.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1783.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_323.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_881.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_279.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_5550.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1541.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3014.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1564.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2363.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_190.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_4964.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1435.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5522.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_1527.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2974.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1207.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_6282.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2422.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1532.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2411.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_3069.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_1987.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2383.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4367.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_4253.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_988.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_2223.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_2514.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_4686.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_2638.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_114.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Malignant_5489.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    },
+    {
+        "img_path": "data/train/Benign_5274.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_4564.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_1384.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Benign_466.jpg",
+        "pred_class": 1,
+        "true_class": 0
+    },
+    {
+        "img_path": "data/train/Malignant_123.jpg",
+        "pred_class": 0,
+        "true_class": 1
+    }
+]
