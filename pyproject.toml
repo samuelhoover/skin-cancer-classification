@@ -1,15 +1,15 @@
 [project]
-name = "tristar-assignment"
+name = "skin-cancer-classification"
 version = "0.1.0"
-description = "Tristar AI coding assigment -- breast cancer classification"
+description = "Skin cancer classification using classical CV"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "matplotlib>=3.10.0",
-    "pandas>=2.2.3",
-    "scikit-image>=0.25.2",
-    "scikit-learn>=1.6.1",
-    "seaborn>=0.13.2",
+  "matplotlib>=3.10.0",
+  "pandas>=2.2.3",
+  "scikit-image>=0.25.2",
+  "scikit-learn>=1.6.1",
+  "seaborn>=0.13.2",
 ]
 
 [dependency-groups]
