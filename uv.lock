@@ -565,28 +565,7 @@ wheels = [
 ]
 
 [[package]]
-name = "threadpoolctl"
-version = "3.5.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/bd/55/b5148dcbf72f5cde221f8bfe3b6a540da7aa1842f6b491ad979a6c8b84af/threadpoolctl-3.5.0.tar.gz", hash = "sha256:082433502dd922bf738de0d8bcc4fdcbf0979ff44c42bd40f5af8a282f6fa107", size = 41936 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/4b/2c/ffbf7a134b9ab11a67b0cf0726453cedd9c5043a4fe7a35d1cefa9a1bcfb/threadpoolctl-3.5.0-py3-none-any.whl", hash = "sha256:56c1e26c150397e58c4926da8eeee87533b1e32bef131bd4bf6a2f45f3185467", size = 18414 },
-]
-
-[[package]]
-name = "tifffile"
-version = "2025.2.18"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "numpy" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/de/1f/96d743b3417425f958dfed2518ad271b346a072d27b6859bb158e601bc21/tifffile-2025.2.18.tar.gz", hash = "sha256:8d731789e691b468746c1615d989bc550ac93cf753e9210865222e90a5a95d11", size = 365412 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/70/6f363ab13f9903557a567a4471a28ee231b962e34af8e1dd8d1b0f17e64e/tifffile-2025.2.18-py3-none-any.whl", hash = "sha256:54b36c4d5e5b8d8920134413edfe5a7cfb1c7617bb50cddf7e2772edb7149043", size = 226358 },
-]
-
-[[package]]
-name = "tristar-assignment"
+name = "skin-cancer-classification"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
@@ -608,6 +587,27 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = []
+
+[[package]]
+name = "threadpoolctl"
+version = "3.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bd/55/b5148dcbf72f5cde221f8bfe3b6a540da7aa1842f6b491ad979a6c8b84af/threadpoolctl-3.5.0.tar.gz", hash = "sha256:082433502dd922bf738de0d8bcc4fdcbf0979ff44c42bd40f5af8a282f6fa107", size = 41936 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/2c/ffbf7a134b9ab11a67b0cf0726453cedd9c5043a4fe7a35d1cefa9a1bcfb/threadpoolctl-3.5.0-py3-none-any.whl", hash = "sha256:56c1e26c150397e58c4926da8eeee87533b1e32bef131bd4bf6a2f45f3185467", size = 18414 },
+]
+
+[[package]]
+name = "tifffile"
+version = "2025.2.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/1f/96d743b3417425f958dfed2518ad271b346a072d27b6859bb158e601bc21/tifffile-2025.2.18.tar.gz", hash = "sha256:8d731789e691b468746c1615d989bc550ac93cf753e9210865222e90a5a95d11", size = 365412 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/70/6f363ab13f9903557a567a4471a28ee231b962e34af8e1dd8d1b0f17e64e/tifffile-2025.2.18-py3-none-any.whl", hash = "sha256:54b36c4d5e5b8d8920134413edfe5a7cfb1c7617bb50cddf7e2772edb7149043", size = 226358 },
+]
 
 [[package]]
 name = "tzdata"
