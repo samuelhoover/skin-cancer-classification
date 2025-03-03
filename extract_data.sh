@@ -13,3 +13,9 @@ for f in data/train/*/*.jpg; do
   fl=$(basename "$f")
   mv "$f" data/train/"${fp}_${fl}"
 done && rm -r data/train/{Benign,Malignant}
+
+for f in data/test/*/*.jpg; do
+  fp=$(basename "$(dirname "$f")")
+  fl=$(basename "$f")
+  mv "$f" data/test/"${fp}_${fl}"
+done && rm -r data/test/{Benign,Malignant}
