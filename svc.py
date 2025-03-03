@@ -105,9 +105,9 @@ def train(black_pixel_threshold, n_pc, svd_solver, save_models=False):
 
     # save scaler, PCA, and SVC models
     if save_models:
-        joblib.dump(scaler, "robust_scaler.pkl", compress=True)
-        joblib.dump(pca, "pca.pkl", compress=True)
-        joblib.dump(clf, "svc.pkl", compress=True)
+        joblib.dump(scaler, "saved-models/robust_scaler.pkl", compress=True)
+        joblib.dump(pca, "saved-models/pca.pkl", compress=True)
+        joblib.dump(clf, "saved-models/svc.pkl", compress=True)
 
     return clf, scaler, pca
 
@@ -149,9 +149,9 @@ def main(run_train=True, run_test=True, save_models=False, load_models=True):
     if run_test:
         print("Testing...")
         if load_models:
-            clf = joblib.load("svc.pkl")
-            scaler = joblib.load("robust_scaler.pkl")
-            pca = joblib.load("pca.pkl")
+            clf = joblib.load("saved-models/svc.pkl")
+            scaler = joblib.load("saved-models/robust_scaler.pkl")
+            pca = joblib.load("saved-models/pca.pkl")
 
         test(clf, scaler, pca, black_pixel_threshold, n_pc, svd_solver)
 
