@@ -10,7 +10,7 @@ from PIL import Image
 from skimage.color import rgb2gray
 from sklearn import decomposition
 
-from consts import SEED
+from utils.consts import SEED
 
 ###########
 ### KEY ###
@@ -96,7 +96,7 @@ def extract_lbp_features(img, num_points, radius):
     return counts
 
 
-def create_full_feature_set(data_src, black_pixel_threshold, save_path):
+def create_full_feature_set(data_src, black_pixel_threshold, save_path=None):
     features_list = []
 
     for f in (x for x in os.listdir(data_src) if x.endswith(".jpg")):
@@ -123,7 +123,10 @@ def create_full_feature_set(data_src, black_pixel_threshold, save_path):
             f"hog_pca_{i}": v
             for i, v in enumerate(
                 extract_hog_features(
-                    img, orientations, pixels_per_cell, cells_per_block
+                    img,
+                    orientations,
+                    pixels_per_cell,
+                    cells_per_block,
                 )
             )
         }
@@ -139,26 +142,38 @@ def create_full_feature_set(data_src, black_pixel_threshold, save_path):
 
     df = pd.DataFrame(features_list)
     df = df.set_index("img_src")
-    df.to_csv(save_path)
+
+    if save_path is None:
+        return df
+    else:
+        df.to_csv(save_path)
 
 
-def calculate_pc_from_hog(X_hog, n_pc, svd_solver="auto"):
-    pca = decomposition.PCA(n_components=n_pc, svd_solver=svd_solver, random_state=SEED)
-    pca.fit(X_hog)
+def calculate_pc_from_hog(X_hog, n_pc, svd_solver="auto", pca=None):
+    if pca is None:
+        pca = decomposition.PCA(
+            n_components=n_pc, svd_solver=svd_solver, random_state=SEED
+        )
+        pca.fit(X_hog)
 
     return pca.transform(X_hog), pca
 
 
-def create_dataset(features_path, n_pc, svd_solver="auto"):
-    df = pd.read_csv(features_path, index_col="img_src")
+def create_dataset(features, n_pc, svd_solver="auto", pca=None):
+    if isinstance(features, pd.DataFrame):
+        df = features
+    else:
+        try:
+            df = pd.read_csv(features, index_col="img_src")
+        except FileNotFoundError as err:
+            print(f"{err}: {features} does not exist and is not a pandas DataFrame")
+
     y = df.pop("tumor")
     X = df
 
     hog_cols = [col for col in X.columns if col.startswith("hog")]
-    hog_pca, _ = calculate_pc_from_hog(
-        X.loc[:, hog_cols],
-        n_pc=n_pc,
-        svd_solver=svd_solver,
+    hog_pca, pca = calculate_pc_from_hog(
+        X.loc[:, hog_cols], n_pc=n_pc, svd_solver=svd_solver, pca=pca
     )
 
     X.drop(hog_cols, axis=1, inplace=True)
@@ -175,7 +190,7 @@ def create_dataset(features_path, n_pc, svd_solver="auto"):
         join="inner",
     )
 
-    return X_reduced, y
+    return (X_reduced, y), pca
 
 
 def main():
