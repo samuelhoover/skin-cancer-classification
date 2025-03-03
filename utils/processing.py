@@ -72,6 +72,10 @@ def calculate_color_moments(grouped_img, **kwargs):
 
 
 def extract_hog_features(img, orientations, pixels_per_cell, cells_per_block):
+    """
+    Calculate Histogram of Gradients (HOG) features from image, return 1d
+    feature vector.
+    """
     return skimage.feature.hog(
         img,
         orientations=orientations,
@@ -83,6 +87,10 @@ def extract_hog_features(img, orientations, pixels_per_cell, cells_per_block):
 
 
 def extract_lbp_features(img, num_points, radius):
+    """
+    Calculate Linear Binary Patterns (LBP) features from image, return 1d
+    feature vector.
+    """
     lbp = skimage.feature.local_binary_pattern(
         np.asarray(rgb2gray(img) * 255).astype(np.uint8), num_points, radius, "uniform"
     )
@@ -97,6 +105,12 @@ def extract_lbp_features(img, num_points, radius):
 
 
 def create_full_feature_set(data_src, black_pixel_threshold, save_path=None):
+    """
+    Generate full feature set, pulling from image paths, tumor types,
+    color/grayscale histograms (while optionally thresholding images), and
+    computing LBP and (full set of) HOG features. Either save or return full
+    feature set.
+    """
     features_list = []
 
     for f in (x for x in os.listdir(data_src) if x.endswith(".jpg")):
@@ -150,6 +164,9 @@ def create_full_feature_set(data_src, black_pixel_threshold, save_path=None):
 
 
 def calculate_pc_from_hog(X_hog, n_pc, svd_solver="auto", pca=None):
+    """
+    Reduce number of HOG features using PCA.
+    """
     if pca is None:
         pca = decomposition.PCA(
             n_components=n_pc, svd_solver=svd_solver, random_state=SEED
@@ -160,6 +177,9 @@ def calculate_pc_from_hog(X_hog, n_pc, svd_solver="auto", pca=None):
 
 
 def create_dataset(features, n_pc, svd_solver="auto", pca=None):
+    """
+    Create training/testing dataset by compressing HOG features using PCA.
+    """
     if isinstance(features, pd.DataFrame):
         df = features
     else:
@@ -207,7 +227,7 @@ def main():
     #     n_pc=100,
     #     svd_solver="auto",
     # )
-    create_dataset("data/features_threshold_5.csv", n_pc=5)
+    # create_dataset("data/features_threshold_5.csv", n_pc=5)
 
 
 if __name__ == "__main__":
