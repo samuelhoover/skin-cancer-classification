@@ -54,12 +54,14 @@ def train(black_pixel_threshold, n_pc, svd_solver, save_models=False):
     outer_cv = model_selection.KFold(n_splits=5, shuffle=True, random_state=SEED)
 
     # want to optimize the complexity of the decision boundary (C and gamma)
+    param_dists = {
+        "C": scipy.stats.loguniform(1e-3, 1e2),
+        "gamma": scipy.stats.loguniform(1e-3, 1e2),
+    }
+
     search = model_selection.RandomizedSearchCV(
         svm.SVC(kernel="rbf", random_state=SEED),
-        {
-            "C": scipy.stats.loguniform(1e-3, 1e2),
-            "gamma": scipy.stats.loguniform(1e-3, 1e2),
-        },
+        param_dists,
         n_iter=10,
         scoring=metrics.make_scorer(metrics.matthews_corrcoef),
         refit=True,
@@ -159,4 +161,8 @@ def main(run_train=True, run_test=True, save_models=False, load_models=True):
 
 
 if __name__ == "__main__":
-    main(run_train=False, run_test=True, save_models=False, load_models=True)
+    run_train = True
+    run_test = True
+    save_models = True
+    load_models = True
+    main(run_train, run_test, save_models, load_models)

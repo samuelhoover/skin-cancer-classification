@@ -5,6 +5,7 @@ import shutil
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import seaborn as sns
 import skimage
 from PIL import Image
@@ -163,24 +164,24 @@ def visualize_heatmap(data, **kwargs):
 
 def main():
     # test_img = np.asarray(Image.open(os.path.join(TRAIN_DIR, "Benign_1000.jpg")))
-    # # see if any images are not 224 x 224 pixels
-    # check_img_dims()
-    #
-    # # visualize benign and malignant tumors (5 random samples, each)
-    # plot_example_images()
+    # see if any images are not 224 x 224 pixels
+    check_img_dims()
+
+    # visualize benign and malignant tumors (5 random samples, each)
+    plot_example_images()
 
     # make some color histogram examples
-    # create_color_histogram_examples(
-    #     20, ignore_black_pixels=True, black_pixel_threshold=10
-    # )
+    create_color_histogram_examples(
+        20, ignore_black_pixels=True, black_pixel_threshold=10
+    )
 
-    # # visualize features
-    # df_from_json = pd.read_json("features.json", orient="index")
-    # # visualize_pairplot(
-    # #     df_from_json, **{"vars": ["mean_red", "mean_green", "mean_blue", "mean_gray"]}
-    # # )
-    # visualize_heatmap(df_from_json, **{"cmap": "vlag"})
-    #
+    # visualize features
+    df_from_json = pd.read_json("features.json", orient="index")
+    visualize_pairplot(
+        df_from_json, **{"vars": ["mean_red", "mean_green", "mean_blue", "mean_gray"]}
+    )
+    visualize_heatmap(df_from_json, **{"cmap": "vlag"})
+
     compile_thresholded_imgs(1)
 
     # equalize_imgs()
